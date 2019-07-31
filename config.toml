@@ -11,14 +11,18 @@ layoutdir = "layouts"
 publishdir = "public"
 
 [params]
-    # Meta
+    #Meta
     title = "Johnny"
-    subtitle = "A kind of boilerplate to perform anyone or anything quickly. Portfolio, collection, bookmarks, contacts and so on."
-    author = "Pavel Kanyshev"
-    description = "Hugrid - grid theme for Hugo with an expanding image preview."
-    keywords = "Hugo, Hugo theme, grid theme, portfolio, bookmarks, collection, contacts"
+    description = "Johnny's portfolio"
+    author = "Johnny"
 
-    tag = "all"
+    #Header
+    logo = "images/logo.png"
+    menu_all = ".jpg"
+    menu_img = ".png"
+    menu_vid = ".vid"
+    menu_txt = ".txt"
+    header_description = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
 
     # Body background color
     bodybgcolor = "#f9f9f9"

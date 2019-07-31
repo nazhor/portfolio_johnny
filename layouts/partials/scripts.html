@@ -435,24 +435,31 @@
 		</script>
 
 		<script>
-			document.querySelector('#btn_all').onclick = function(){
+			$(function() {
+				Grid.init();
+			});
+		</script>
+
+		<!-- Custom -->
+		<script>
+			document.querySelector('#menu_all').onclick = function() {
 				change_visibility('all', true);
-			}
-			document.querySelector('#btn_img').onclick = function(){
+			};
+			document.querySelector('#menu_img').onclick = function() {
 				change_visibility('potochop', true);
 				change_visibility('video', false);
 				change_visibility('texto', false);
-			}
-			document.querySelector('#btn_video').onclick = function(){
+			};
+			document.querySelector('#menu_vid').onclick = function() {
 				change_visibility('potochop', false);
 				change_visibility('video', true);
 				change_visibility('texto', false);
-			}
-			document.querySelector('#btn_txt').onclick = function(){
+			};
+			document.querySelector('#menu_txt').onclick = function() {
 				change_visibility('potochop', false);
 				change_visibility('video', false);
 				change_visibility('texto', true);
-			}
+			};
 
 			function change_visibility( $class_to_change, $state ) {
 				if ( $state )
@@ -466,11 +473,6 @@
 				[].forEach.call(document.querySelectorAll('.' + $class_to_change), function (change) {
 					change.style.display = $new_state;
 				});
-			}
-		</script>
+			};
 
-		<script>
-			$(function() {
-				Grid.init();
-			});
 		</script>

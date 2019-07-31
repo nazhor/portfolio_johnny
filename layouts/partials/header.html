@@ -1,9 +1,16 @@
-			<header class="clearfix">
-				<h1>{{ with .Site.Params.title }}{{ . | markdownify }}{{ end }}<span>{{ with .Site.Params.subtitle }}{{ . | markdownify }}{{ end }}</span></h1>
-
-				<button class="btn_nz" id="btn_all">All</button>
-				<button class="btn_nz" id="btn_img">IMG</button>
-				<button class="btn_nz" id="btn_video">Video</button>
-				<button class="btn_nz" id="btn_txt">Text</button>
-				<p class="p_nz">Prueba</p>
+			<header>
+				<div class="menu_container">
+					<div>
+						<img src="{{ .Site.Params.logo }}" height="150" width="300">
+					</div>
+					<div>
+						<ul>
+							<li class="menu_filter" id="menu_all">{{ .Site.Params.menu_all }}</li>
+							<li class="menu_filter" id="menu_img">{{ .Site.Params.menu_img }}</li>
+							<li class="menu_filter" id="menu_vid">{{ .Site.Params.menu_vid }}</li>
+							<li class="menu_filter" id="menu_txt">{{ .Site.Params.menu_txt }}</li>
+						</ul>
+					</div>
+				</div>
+				<p class="header_description">{{ .Site.Params.header_description }}</p>
 			</header>

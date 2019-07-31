@@ -13,21 +13,6 @@ html { height: 100%; }
 	margin: 0;
 }
 
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-weight: 300;
@@ -47,34 +32,43 @@ a {
 	position: relative;
 }
 
-.container > header {
-	width: 90%;
-	max-width: 1240px;
+.container header {
 	margin: 0 auto;
 	position: relative;
-	padding: 0 30px 50px 30px;
+	padding: 30px 30px 0 30px;
 }
 
-.container > header {
-	padding: 60px 30px 50px;
-	text-align: center;
-}
-
-.container > header h1 {
-	font-size: 34px;
-	line-height: 38px;
-	margin: 0 auto;
-	font-weight: 700;
-	color: #333;
-}
-
-.container > header h1 span {
-	display: block;
-	font-size: 20px;
-	font-weight: 300;
-}
-
-.main > p {
+.main p {
 	text-align: center;
 	padding: 50px 20px;
+}
+
+.menu_container {
+	display: flex;
+	align-items: center;
+}
+
+.menu_filter {
+	font-size: 20px;
+	font-family: 'Comic Sans MS';
+	list-style-type: none;
+	margin: 5px 20px 5px 20px;
+	width: 10px;
+	-webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+	transition: width 0.5s;
+}
+
+.menu_filter:hover {
+	width: 100px;
+	background-color: red;
+}
+
+.menu_filter:hover {
+	color: blue;
+	cursor: pointer;
+}
+
+.header_description {
+	padding: 10px 0px 0px 0px;
+	font-family: 'Comic Sans MS';
 }
