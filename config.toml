@@ -22,13 +22,19 @@ publishdir = "public"
     menu_img = ".png"
     menu_vid = ".vid"
     menu_txt = ".txt"
+    menu_exe = ".exe"
     header_description = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
+
+    slide1 = "images/1.png"
+    slide2 = "images/2.png"
+    slide3 = "images/3.png"
+    slide4 = "images/4.png"
 
     # Body background color
     bodybgcolor = "#f9f9f9"
 
     # Preview container button text
-    buttontext = "Get the theme"
+    buttontext = "Aja!"
 
     # Footer text
     footertext = "Made by [Codrops](http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/), [Hugo](http://gohugo.io) and [me](https://github.com/aerohub)"

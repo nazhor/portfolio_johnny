@@ -7,6 +7,10 @@ description = "A simple grid theme for Hugo. A kind of boilerplate to perform an
 url = "https://github.com/aerohub/hugrid"
 buttontext = "Cabezon"
 tag = "potochop"
+slide1 = "images/img_snowtops.jpg"
+slide2 = "images/img_lights.jpg"
+slide3 = "images/img_mountains.jpg"
+slide4 = "images/img_forest.jpg"
 [[items]]
 title = "Hugrid Theme 2"
 image = "images/full/2.png"
@@ -16,6 +20,10 @@ description = "A simple grid theme for Hugo. A kind of boilerplate to perform an
 url = "https://github.com/aerohub/hugrid"
 buttontext = "Prueba 2"
 tag = "potochop"
+slide1 = "images/img_lights.jpg"
+slide2 = "images/img_mountains.jpg"
+slide3 = "images/img_forest.jpg"
+slide4 = "images/img_snowtops.jpg"
 [[items]]
 title = "Hugrid Theme 3"
 image = "images/full/3.png"
@@ -25,6 +33,10 @@ description = "A simple grid theme for Hugo. A kind of boilerplate to perform an
 url = "https://github.com/aerohub/hugrid"
 buttontext = "Prueba 3"
 tag = "video"
+slide1 = "images/img_snowtops.jpg"
+slide2 = "images/img_lights.jpg"
+slide3 = "images/img_mountains.jpg"
+slide4 = "images/img_forest.jpg"
 [[items]]
 title = "Hugrid Theme 4"
 image = "images/full/4.png"

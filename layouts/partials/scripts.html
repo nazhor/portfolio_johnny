@@ -271,10 +271,17 @@
 						this.$description = $( '<p></p>' );
 						this.$href = $( '<a href="#" target="_blank">{{ .Site.Params.buttontext }}</a>' );
 						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
-						this.$loading = $( '<div class="og-loading"></div>' );
-						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+						// this.$loading = $( '<div class="og-loading"></div>' );
+						this.$slide1 = $('<img class="nzSlides" src="{{ .Site.Params.slide1 }}" style="display: inline-block;">');
+						this.$slide2 = $('<img class="nzSlides" src="{{ .Site.Params.slide2 }}" style="display: none;">');
+						this.$slide3 = $('<img class="nzSlides" src="{{ .Site.Params.slide3 }}" style="display: none;">');
+						this.$slide4 = $('<img class="nzSlides" src="{{ .Site.Params.slide4 }}" style="display: none;">');
+						this.$buttons = $('<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button><button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button></div>');
+						this.$slides_container = $('<div class="slides_container"><div>').append( this.$slide1, this.$slide2, this.$slide3, this.$slide4, this.$buttons);
+						// this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 						this.$closePreview = $( '<span class="og-close"></span>' );
-						this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+						// this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+						this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$slides_container, this.$details );
 						this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
 						this.$item.append( this.getEl() );
 						if( support ) {
@@ -296,19 +303,50 @@
 
 						current = this.$item.index();
 
+
+                        //Esto recupera los data pasados como parm a la <a>
 						var $itemEl = this.$item.children( 'a' ),
 							eldata = {
 								href : $itemEl.attr( 'href' ),
 								largesrc : $itemEl.data( 'largesrc' ),
 								title : $itemEl.data( 'title' ),
 								description : $itemEl.data( 'description' ),
-								buttontext : $itemEl.data( 'buttontext' )
+								buttontext : $itemEl.data( 'buttontext' ),
+								slide1 : $itemEl.data( 'slide1' ),
+								slide2 : $itemEl.data( 'slide2' ),
+								slide3 : $itemEl.data( 'slide3' ),
+								slide4 : $itemEl.data( 'slide4' )
 							};
 
 						this.$title.html( eldata.title );
 						this.$description.html( eldata.description );
-						if(eldata.buttontext) this.$href.text(eldata.buttontext);
-						else this.$href.text("{{ .Site.Params.buttontext }}")
+						if(eldata.buttontext)
+							// this.$href.text(eldata.buttontext);
+							this.$href.text('show');
+						else
+							this.$href.text("{{ .Site.Params.buttontext }}")
+
+
+                        if(eldata.slide1)
+						    this.$slide1.attr('src', eldata.slide1);
+                        else
+                            this.$slide1.attr('src', "{{ .Site.Params.slide1 }}")
+
+                        if(eldata.slide2)
+						    this.$slide2.attr('src', eldata.slide2);
+                        else
+                            this.$slide2.attr('src', "{{ .Site.Params.slide2 }}")
+
+                        if(eldata.slide3)
+						    this.$slide3.attr('src', eldata.slide3);
+                        else
+                            this.$slide3.attr('src', "{{ .Site.Params.slide3 }}")
+
+                        if(eldata.slide4)
+						    this.$slide4.attr('src', eldata.slide4);
+                        else
+                            this.$slide4.attr('src', "{{ .Site.Params.slide4 }}")
+
 
 						if (eldata.href) {
 							this.$href.attr( 'href', eldata.href );
@@ -324,18 +362,19 @@
 							self.$largeImg.remove();
 						}
 
-						if( self.$fullimage.is( ':visible' ) ) {
-							this.$loading.show();
-							$( '<img/>' ).load( function() {
-								var $img = $( this );
-								if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
-									self.$loading.hide();
-									self.$fullimage.find( 'img' ).remove();
-									self.$largeImg = $img.fadeIn( 350 );
-									self.$fullimage.append( self.$largeImg );
-								}
-							} ).attr( 'src', eldata.largesrc );
-						}
+						//+dbs+ Here load the left img
+						// if( self.$fullimage.is( ':visible' ) ) {
+						// 	this.$loading.show();
+						// 	$( '<img/>' ).load( function() {
+						// 		var $img = $( this );
+						// 		if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
+						// 			self.$loading.hide();
+						// 			self.$fullimage.find( 'img' ).remove();
+						// 			self.$largeImg = $img.fadeIn( 350 );
+						// 			self.$fullimage.append( self.$largeImg );
+						// 		}
+						// 	} ).attr( 'src', eldata.largesrc );
+						// }
 
 					},
 					open : function() {
@@ -443,6 +482,7 @@
 		<!-- Custom -->
 		<script>
 			document.querySelector('#menu_all').onclick = function() {
+				// hidePreview();
 				change_visibility('all', true);
 			};
 			document.querySelector('#menu_img').onclick = function() {
@@ -474,5 +514,23 @@
 					change.style.display = $new_state;
 				});
 			};
+
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("nzSlides");
+				if (n > x.length) { slideIndex = 1 }
+				if (n < 1) { slideIndex = x.length }
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				x[slideIndex-1].style.display = "inline-block";
+			}
 
 		</script>

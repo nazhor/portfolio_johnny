@@ -10,9 +10,9 @@
 			<div class="main">
 				<ul id="og-grid" class="og-grid">
 					{{ range $.Site.Data.items.items }}
-					<li class="all {{.tag}}">
-						<a href="{{.url}}" data-largesrc="{{.image}}" data-title="{{.title}}" data-description="{{.description }}" data-buttontext="{{.buttontext}}" data-tag="{{.tag}}">
-							<img src="{{.thumb}}" alt="{{.alt}}"/>
+					<li class="all {{ .tag }}">
+						<a href="{{ .url }}" data-largesrc="{{ .image }}" data-title="{{ .title }}" data-description="{{ .description }}" data-buttontext="{{ .buttontext }}" data-tag="{{ .tag }}" data-slide1="{{ .slide1 }}" data-slide2="{{ .slide2 }}" data-slide3="{{ .slide3 }}" data-slide4="{{ .slide4 }}">
+							<img src="{{ .thumb }}" alt="{{ .alt }}"/>
 						</a>
 					</li>
 					{{ end }}
