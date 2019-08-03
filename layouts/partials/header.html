@@ -1,7 +1,7 @@
 			<header>
 				<div class="menu_container">
 					<div>
-						<img src="{{ .Site.Params.logo }}" height="180" width="300">
+						<img src="{{ .Site.Params.logo }}" height="200" width="300">
 					</div>
 					<div>
 						<ul>
@@ -9,9 +9,15 @@
 							<li class="menu_filter" id="menu_img">{{ .Site.Params.menu_img }}</li>
 							<li class="menu_filter" id="menu_vid">{{ .Site.Params.menu_vid }}</li>
 							<li class="menu_filter" id="menu_txt">{{ .Site.Params.menu_txt }}</li>
-							<li class="menu_filter" id="menu_exe">{{ .Site.Params.menu_exe }}</li>
+							<li class="menu_filter" id="menu_vdg">{{ .Site.Params.menu_vdg }}</li>
+							<li class="menu_filter" id="menu_cnt">{{ .Site.Params.menu_cnt }}</li>
 						</ul>
 					</div>
 				</div>
-				<p class="header_description">{{ .Site.Params.header_description }}</p>
+				<p class="header_text header_text_all" style="display: inline-block;">{{ .Site.Params.header_text_all }}</p>
+				<p class="header_text header_text_img" style="display: none;">{{ .Site.Params.header_text_img }}</p>
+				<p class="header_text header_text_vid" style="display: none;">{{ .Site.Params.header_text_vid }}</p>
+				<p class="header_text header_text_txt" style="display: none;">{{ .Site.Params.header_text_txt }}</p>
+				<p class="header_text header_text_vdg" style="display: none;">{{ .Site.Params.header_text_vdg }}</p>
+				<p class="header_text header_text_cnt" style="display: none;">{{ .Site.Params.header_text_cnt }}</p>
 			</header>

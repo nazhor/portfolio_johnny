@@ -5,11 +5,6 @@ title = "Johnny Devv"
 
 googleAnalytics = "UA-XXXXXXXX-Y"
 
-contentdir = "content"
-datadir = "data"
-layoutdir = "layouts"
-publishdir = "public"
-
 [params]
     #Meta
     title = "Johnny"
@@ -22,19 +17,24 @@ publishdir = "public"
     menu_img = ".png"
     menu_vid = ".vid"
     menu_txt = ".txt"
-    menu_exe = ".exe"
-    header_description = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
+    menu_vdg = ".exe"
+    menu_cnt = ".info"
+    header_text_all = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
+    header_text_img = "Texto manchafolios"
+    header_text_vid = "Texto videos"
+    header_text_txt = "Textoception"
+    header_text_vdg = "Video juegos"
+    header_text_cnt = "Contacto"
 
-    slide1 = "images/1.png"
-    slide2 = "images/2.png"
-    slide3 = "images/3.png"
-    slide4 = "images/4.png"
+    #Contact
+    ContactPhoto = "images/contact.jpg"
+    TwitterID="johnny_devv"
+    ItchioID= "johnnyprat"
+    LinkedInID = ""
+    Email = "contact@johnnydevv.com"
 
     # Body background color
     bodybgcolor = "#f9f9f9"
-
-    # Preview container button text
-    buttontext = "Aja!"
 
     # Footer text
     footertext = "Made by [Codrops](http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/), [Hugo](http://gohugo.io) and [me](https://github.com/aerohub)"

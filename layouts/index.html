@@ -11,15 +11,22 @@
 				<ul id="og-grid" class="og-grid">
 					{{ range $.Site.Data.items.items }}
 					<li class="all {{ .tag }}">
-						<a href="{{ .url }}" data-largesrc="{{ .image }}" data-title="{{ .title }}" data-description="{{ .description }}" data-buttontext="{{ .buttontext }}" data-tag="{{ .tag }}" data-slide1="{{ .slide1 }}" data-slide2="{{ .slide2 }}" data-slide3="{{ .slide3 }}" data-slide4="{{ .slide4 }}">
-							<img src="{{ .thumb }}" alt="{{ .alt }}"/>
+						<a href="{{ .button_url }}" data-title="{{ .title }}" data-description="{{ .description }}" data-button_text="{{ .button_text }}" data-tag="{{ .tag }}" data-video="{{ .video }}" data-slide1="{{ .slide1 }}" data-slide2="{{ .slide2 }}" data-slide3="{{ .slide3 }}" data-slide4="{{ .slide4 }}" data-slide5="{{ .slide5 }}" data-slide6="{{ .slide6 }}" data-slide7="{{ .slide7 }}" data-slide8="{{ .slide8 }}">
+							<img class="thumb" src="{{ .thumb }}"/>
 						</a>
 					</li>
 					{{ end }}
 				</ul>
-				{{ partial "footer.html" . }}
+				<div class="row contact_container">
+					<div class="col-xs-12">
+					{{ partial "social.html" . }}
+					</div>
+					<img src={{ $.Site.Params.ContactPhoto }}>
+				</div>
 			</div>
 		</div>
-		{{ partial "scripts.html" . }}
+		{{ partial "footer.html" . }}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/scripts.js"></script>
 	</body>
 </html>
