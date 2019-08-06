@@ -1,7 +1,7 @@
 # Site settings
-baseurl = "http://example.org/"
-languageCode = "en-us"
+baseurl = "https://johnny-devv.github.io/"
 title = "Johnny Devv"
+DefaultContentLanguage = "en"
 
 googleAnalytics = "UA-XXXXXXXX-Y"
 
@@ -19,12 +19,6 @@ googleAnalytics = "UA-XXXXXXXX-Y"
     menu_txt = ".txt"
     menu_vdg = ".exe"
     menu_cnt = ".info"
-    header_text_all = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
-    header_text_img = "Texto manchafolios"
-    header_text_vid = "Texto videos"
-    header_text_txt = "Textoception"
-    header_text_vdg = "Video juegos"
-    header_text_cnt = "Contacto"
 
     #Contact
     ContactPhoto = "images/contact.jpg"
@@ -38,3 +32,23 @@ googleAnalytics = "UA-XXXXXXXX-Y"
 
     # Footer Copyright name
     footername = "Johnny Devv"
+
+[languages]
+    [languages.en]
+        [languages.en.params]
+            languageName = "en"
+            header_text_all = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
+            header_text_img = "Text draw"
+            header_text_vid = "Text video"
+            header_text_txt = "Textception"
+            header_text_vdg = "Video games"
+            header_text_cnt = "Contact"
+    [languages.es]
+        [languages.es.params]
+            languageName = "es"
+            header_text_all = "Manzana pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
+            header_text_img = "Texto manchafolios"
+            header_text_vid = "Texto videos"
+            header_text_txt = "Textoception"
+            header_text_vdg = "Videojuegos"
+            header_text_cnt = "Contacto"

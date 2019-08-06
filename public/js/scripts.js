@@ -1,6 +1,7 @@
 var slideIndex = 0;
 var used_slides = 0;
 var showing_slides = 0;
+var showing_modal_slides = 0;
 
 var $event = $.event,
 $special,
@@ -211,10 +212,14 @@ var Grid = (function() {
 	function initItemsEvents( $items ) {
 		$items.on( 'click', 'span.og-close', function() {
 			hidePreview();
+
 			slideIndex = 1;
+
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
+
 			slideIndex = 1;
+
 			var $item = $( this ).parent();
 			current === Array.from($items).findIndex(d => d == $item[0]) ? hidePreview() : showPreview( $item );
 			return false;
@@ -273,20 +278,32 @@ var Grid = (function() {
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#" target="_blank">Test</a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
-			this.$slide1 = $('<img class="nzSlides" src="" style="display: inline-block;">');
-			this.$slide2 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$slide3 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$slide4 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$slide5 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$slide6 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$slide7 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$slide8 = $('<img class="nzSlides" src="" style="display: none;">');
-			this.$buttons = $('<button class="w3-button w3-black w3-display-left" onclick="plusSlides(-1)">&#10094;</button><button class="w3-button w3-black w3-display-right" onclick="plusSlides(1)">&#10095;</button></div>');
+			this.$slide1 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: inline-block;">');
+			this.$slide2 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$slide3 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$slide4 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$slide5 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$slide6 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$slide7 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$slide8 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
+			this.$buttons = $('<button class="nav_btn nav_btn_left" onclick="plusSlides(-1)">&#10094;</button><button class="nav_btn nav_btn_right" onclick="plusSlides(1)">&#10095;</button>');
 			this.$slides_container = $('<div class="left_container"><div>').append( this.$slide1, this.$slide2, this.$slide3, this.$slide4, this.$slide5, this.$slide6, this.$slide7, this.$slide8, this.$buttons);
 			this.$video_iframe = $('<iframe class="nzIframe" src="" frameborder="0"></iframe>');
 			this.$video_container = $('<div class="left_container"></div>').append(this.$video_iframe);
+			this.$modal_close = $('<span class="modal_close" onclick="closeModal()">&times;</span>');
+			this.$modal_buttons = $('<button class="nav_btn nav_btn_left" onclick="plusSlides(-1)">&#10094;</button><button class="nav_btn nav_btn_right" onclick="plusSlides(1)">&#10095;</button>');
+			this.$modal_slide1 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide2 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide3 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide4 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide5 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide6 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide7 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_slide8 = $('<img class="nzModalSlides" src="" style="width: 100%">');
+			this.$modal_content = $('<div class="modal_content"></div>').append(this.$modal_slide1, this.$modal_slide2, this.$modal_slide3, this.$modal_slide4, this.$modal_slide5, this.$modal_slide6, this.$modal_slide7, this.$modal_slide8, this.$modal_buttons);
+			this.$modal_container = $('<div id="modal_visor" class="modal_container"></div>').append(this.$modal_close, this.$modal_content);
 			this.$closePreview = $( '<span class="og-close"></span>' );
-			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$slides_container, this.$video_container, this.$details );
+			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$slides_container, this.$video_container, this.$modal_container, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
 			this.$item.append( this.getEl() );
 			if( support ) {
@@ -341,60 +358,78 @@ var Grid = (function() {
 			if(eldata.slide1) {
 				this.$slide1.attr('src', eldata.slide1);
 				this.$slide1.show();
+				this.$modal_slide1.attr('src', eldata.slide1);
 			} else {
 				this.$slide1.attr('src', "");
 				this.$slide1.hide();
+				this.$modal_slide1.attr('src', "");
 			}
 			if(eldata.slide2) {
 				this.$slide2.attr('src', eldata.slide2);
 				this.$slide2.show();
 				this.$buttons.show();
+				this.$modal_slide2.attr('src', eldata.slide2);
+				this.$modal_buttons.show();
 			}else {
 				this.$slide2.attr('src', "");
 				this.$slide2.hide();
 				this.$buttons.hide();
+				this.$modal_slide2.attr('src', "");
+				this.$modal_buttons.hide();
 			}
 			if(eldata.slide3) {
 				this.$slide3.attr('src', eldata.slide3);
 				this.$slide3.show();
+				this.$modal_slide3.attr('src', eldata.slide3);
 			}else {
 				this.$slide3.attr('src', "");
 				this.$slide3.hide();
+				this.$modal_slide3.attr('src', "");
 			}
 			if(eldata.slide4) {
 				this.$slide4.attr('src', eldata.slide4);
 				this.$slide4.show();
+				this.$modal_slide4.attr('src', eldata.slide4);
 			}else {
 				this.$slide4.attr('src', "");
 				this.$slide4.hide();
+				this.$modal_slide4.attr('src', "");
 			}
 			if(eldata.slide5) {
 				this.$slide5.attr('src', eldata.slide5);
 				this.$slide5.show();
+				this.$modal_slide5.attr('src', eldata.slide5);
 			}else {
 				this.$slide5.attr('src', "");
 				this.$slide5.hide();
+				this.$modal_slide5.attr('src', "");
 			}
 			if(eldata.slide6) {
 				this.$slide6.attr('src', eldata.slide6);
 				this.$slide6.show();
+				this.$modal_slide6.attr('src', eldata.slide6);
 			}else {
 				this.$slide6.attr('src', "");
 				this.$slide6.hide();
+				this.$modal_slide6.attr('src', "");
 			}
 			if(eldata.slide7) {
 				this.$slide7.attr('src', eldata.slide7);
 				this.$slide7.show();
+				this.$modal_slide7.attr('src', eldata.slide7);
 			}else {
 				this.$slide7.attr('src', "");
 				this.$slide7.hide();
+				this.$modal_slide7.attr('src', "");
 			}
 			if(eldata.slide8) {
 				this.$slide8.attr('src', eldata.slide8);
 				this.$slide8.show();
+				this.$modal_slide8.attr('src', eldata.slide8);
 			}else {
 				this.$slide8.attr('src', "");
 				this.$slide8.hide();
+				this.$modal_slide8.attr('src', "");
 			}
 
 			if(eldata.video) {
@@ -566,12 +601,9 @@ function change_visibility( $class_to_change, $state ) {
 	});
 };
 
-function change_text( $class_to_change, $state ) {
-
-};
-
 function setupSlides() {
 	showing_slides = document.getElementsByClassName("nzSlides");
+	showing_modal_slides = document.getElementsByClassName("nzModalSlides");
 	used_slides = 0;
 	for (i = 0; i < document.getElementsByClassName("nzSlides").length; i++) {
 		var ext = showing_slides[i].src.split(".");
@@ -585,7 +617,7 @@ function setupSlides() {
 function plusSlides(n) {
 	setupSlides();
 	showSlides(slideIndex += n);
-}
+};
 
 function showSlides(n) {
 	var i;
@@ -597,8 +629,18 @@ function showSlides(n) {
 	}
 	for (i = 0; i < used_slides; i++) {
 		showing_slides[i].style.display = "none";
+		showing_modal_slides[i].style.display = "none";
 	}
 	showing_slides[slideIndex - 1].style.display = "inline-block";
-}
+	showing_modal_slides[slideIndex - 1].style.display = "inline-block";
+};
+
+function openModal() {
+	document.getElementById("modal_visor").style.display = "block";
+};
+
+function closeModal() {
+	document.getElementById("modal_visor").style.display = "none";
+};
 
 

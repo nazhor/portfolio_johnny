@@ -26,6 +26,11 @@ a {
 	text-decoration: none;
 }
 
+.logo img {
+	height: 200px;
+	width: 300px;
+}
+
 .container {
 	width: 100%;
 	min-height: calc(100vh - 30px);
