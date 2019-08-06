@@ -12,7 +12,7 @@ googleAnalytics = "UA-XXXXXXXX-Y"
     author = "Johnny"
 
     #Header
-    logo = "images/logo.png"
+    logo = "/images/logo.png"
     menu_all = ".jpg"
     menu_img = ".png"
     menu_vid = ".vid"
@@ -21,7 +21,7 @@ googleAnalytics = "UA-XXXXXXXX-Y"
     menu_cnt = ".info"
 
     #Contact
-    ContactPhoto = "images/contact.jpg"
+    ContactPhoto = "/images/contact.jpg"
     TwitterID="johnny_devv"
     ItchioID= "johnnyprat"
     LinkedInID = ""
