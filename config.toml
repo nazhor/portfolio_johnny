@@ -36,9 +36,5 @@ googleAnalytics = "UA-XXXXXXXX-Y"
     # Body background color
     bodybgcolor = "#f9f9f9"
 
-    # Footer text
-    footertext = "Made by [Codrops](http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/), [Hugo](http://gohugo.io) and [me](https://github.com/aerohub)"
-
-    # add extra-css
-    # custom_css = ['css/extra1.css', 'css/extra2.css']
-
+    # Footer Copyright name
+    footername = "Johnny Devv"

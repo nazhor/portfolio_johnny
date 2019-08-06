@@ -17,11 +17,13 @@
 					</li>
 					{{ end }}
 				</ul>
-				<div class="row contact_container">
-					<div class="col-xs-12">
+				<div class=" contact_container">
+					<div>
 					{{ partial "social.html" . }}
 					</div>
-					<img src={{ $.Site.Params.ContactPhoto }}>
+					<div>
+						<img src={{ $.Site.Params.ContactPhoto }}>
+					</div>
 				</div>
 			</div>
 		</div>
