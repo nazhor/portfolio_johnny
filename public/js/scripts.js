@@ -606,9 +606,10 @@ function setupSlides() {
 	showing_modal_slides = document.getElementsByClassName("nzModalSlides");
 	used_slides = 0;
 	for (i = 0; i < document.getElementsByClassName("nzSlides").length; i++) {
-		var ext = showing_slides[i].src.split(".");
-		if ( ext[1] == "jpg" ||
-			 ext[1] == "png" ){
+		var split_url = showing_slides[i].src.split(".");
+		var ext = split_url[split_url.length - 1];
+		if ( ext == "jpg" ||
+			 ext == "png" ){
 			used_slides++;
 		}
 	}
