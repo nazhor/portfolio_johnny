@@ -1,4 +1,4 @@
-SET destiny_folder=D:\Projects\Hugo\johnny-devv.github.io
+SET destiny_folder=E:\Projects\Web\johnny-devv.github.io
 
 REM Dark zone from here, do not modify
 ECHO Starting process

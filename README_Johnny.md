@@ -11,7 +11,7 @@ The most important files (and the only ones you are going to use) are:
 For see the changes in realtime to have to:
 1. Open a console. Search for cmd in windows start menu.
 2. Go to the current portfolio folder, for example: cd D:\Projects\Hugo\portfolio_johnny
-3. Execute the command: hugo server -D.
+3. Execute the command: hugo server -D
 4. Go to http://localhost:1313 with a browser
 
 ## Get the items ready
@@ -20,6 +20,6 @@ You only need the batch file named "Alfred.bat" but before you use it you have t
 
 ## Push the content to Github
 With the files in the repository folder you only have to do the normal GIT procedure: Add -> Commit -> Push.
-You can use the SourceTree GIT client.
+You can use the GIThub client.
 
 ## Done, you owe me a _couple_ of drinks
