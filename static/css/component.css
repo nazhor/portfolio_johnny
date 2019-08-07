@@ -8,7 +8,7 @@
 
 .og-grid li {
 	display: inline-block;
-	margin: 10px 5px 0 5px;
+	margin: 10px 0;
 	vertical-align: top;
 	height: 250px;
 }
@@ -85,6 +85,15 @@
 	background: #333;
 }
 
+@media only screen and (max-width: 768px) {
+	.og-close {
+		width: 20px;
+		height: 20px;
+		top: 15px;
+		right: 15px;
+	}
+}
+
 .og-fullimg,
 .og-details {
 	width: 50%;
@@ -96,6 +105,12 @@
 
 .og-details {
 	padding: 0 40px 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+	.og-details {
+		padding: 1px;
+	}
 }
 
 .og-fullimg {
@@ -113,6 +128,13 @@
 	font-size: 52px;
 	padding: 40px 0 10px;
 	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	.og-details h3 {
+		padding: 10px 0 5px;
+		margin-bottom: 0px;
+	}
 }
 
 .og-details p {

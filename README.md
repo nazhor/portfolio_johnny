@@ -11,4 +11,5 @@ Developed with [Hugo](https://gohugo.io/) framework.
 * Tag filter
 * Image slides/video iframe instead of single image element on every portfolio item
 * Modal image viewer
+* Responsive layout
 

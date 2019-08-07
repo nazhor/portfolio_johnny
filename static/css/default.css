@@ -31,6 +31,13 @@ a {
 	width: 300px;
 }
 
+@media only screen and (max-width: 768px) {
+	.logo img {
+		height: 100px;
+		width: 200px;
+	}
+}
+
 .container {
 	width: 100%;
 	min-height: calc(100vh - 30px);
@@ -40,16 +47,11 @@ a {
 .container header {
 	margin: 0 auto;
 	position: relative;
-	padding: 30px 30px 0 30px; /* Esto modifica los margenes del header */
+	padding: 30px 30px 0 30px;
 }
 
 .main {
-	padding: 0 30px 0 30px; /* Esto modifica los margenes del body */
-}
-
-.main p {
-	text-align: center;
-	padding: 50px 20px;
+	padding: 0 30px 0 30px;
 }
 
 .thumb {
@@ -72,6 +74,12 @@ a {
 	transition: width 0.5s;
 }
 
+@media only screen and (max-width: 768px) {
+	.menu_filter {
+		font-size: 12px;
+	}
+}
+
 .menu_filter:hover {
 	width: 100px;
 	background-color: red;
@@ -84,6 +92,11 @@ a {
 	font-family: 'Comic Sans MS';
 }
 
+.menu_texts p {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
 .left_container {
 	float: left;
 	width: 50%;
@@ -91,6 +104,13 @@ a {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.left_container {
+		width: 95%;
+		height: 50%;
+	}
 }
 
 .nav_btn {
@@ -161,6 +181,20 @@ a {
 
 .contact_container {
 	display: none;
+}
+
+.contact_photo img {
+	margin-top: 20px;
+	height: 400px;
+	width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+	.contact_photo img {
+		margin-top: 10px;
+		height: 75%;
+		width: 75%;
+	}
 }
 
 .footer {

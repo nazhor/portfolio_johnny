@@ -2,7 +2,6 @@
 baseurl = "https://johnny-devv.github.io/"
 title = "Johnny Devv"
 DefaultContentLanguage = "en"
-
 googleAnalytics = "UA-XXXXXXXX-Y"
 
 [params]
