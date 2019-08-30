@@ -23,31 +23,31 @@ googleAnalytics = "UA-XXXXXXXX-Y"
     ContactPhoto = "/images/contact.jpg"
     TwitterID="johnny_devv"
     ItchioID= "johnnyprat"
-    LinkedInID = ""
+    LinkedInID = "https://www.linkedin.com/in/jonathan-prat-5368509a/"
     Email = "contact@johnnydevv.com"
 
     # Body background color
     bodybgcolor = "#f9f9f9"
 
     # Footer Copyright name
-    footername = "Johnny Devv"
+    footername = "Johnny Prat"
 
 [languages]
     [languages.en]
         [languages.en.params]
-            languageName = "en"
-            header_text_all = "Apple pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
-            header_text_img = "Text draw"
-            header_text_vid = "Text video"
-            header_text_txt = "Textception"
-            header_text_vdg = "Video games"
-            header_text_cnt = "Contact"
+            languageName = ">ENGLISH"
+            header_text_all = "/johnny.jpg/ABOUT ME/ Hi! I'm Jonathan Prat Guisado (.jpg), but everybody calls me Johnny. I'm a game, narrative and graphic designer. But mostly I'm a storyteller. I love telling stories and I do it through games, words and images. I studied graphic design and now I'm focused on developing my game design skills. Some years ago I co-founded with my good friend David Bernad (and some former members) an indie video game development studio called No Wand Studios. We released some little jam games and The Fall of Lazarus, our first big project. Later on and when we were only the two of us (David and I) we started working hand in hand on Hello, My Name is Nobody, an experimental video game about conversations and loneliness that it is yet to be finished. I'm also a staff editor at GameReport, a spanish video game focused editorial where we publish physical monographics and digital essays about video games analysing their uniqueness as a medium and their impact on society and culture. "
+            header_text_img = "/johnny.png/GRAPHIC DESIGN/ My graphic design works so far. A picture speaks a thousand words. "
+            header_text_vid = "/johnny.vid/VIDEO EDITING/ Some of my video edits. Mostly trailers, I love the challenge of having to be compelling while explaining a product at the same time in just a couple of minutes."
+            header_text_txt = "/johnny.txt/WRITING/ A selection of my writting pieces. Reviews, opinion columns, even a postmortem!"
+            header_text_vdg = "/johnny.exe/NARRATIVE AND GAME DESIGN/ Video game developments I've been involved as a game, narrative and graphic designer. Interaction is such a powerful tool for immersing the audience into your story."
+            header_text_cnt = "/johnny.info/CONTACT/ If you want to talk about working together or whatever, drop me a line!"
     [languages.es]
         [languages.es.params]
-            languageName = "es"
-            header_text_all = "Manzana pie icing apple pie lollipop carrot cake jelly apple pie chupa chups candy canes. Sugar plum danish powder. Candy jujubes icing jelly donut biscuit. Cupcake croissant wafer jelly dessert dessert marzipan sweet powder."
-            header_text_img = "Texto manchafolios"
-            header_text_vid = "Texto videos"
-            header_text_txt = "Textoception"
-            header_text_vdg = "Videojuegos"
-            header_text_cnt = "Contacto"
+            languageName = ">ESPAÑOL"
+            header_text_all = "/SOBRE MI/ ¡Hola! Soy Jonathan Prat Guisado (.jpg) pero todo el mundo me llama Johnny. Soy diseñador narrativo, de juego y gráfico. Pero sobre todo soy un cuenta cuentos. Me apasiona contar historias y lo hago a través de videojuegos, imágenes y palabras. Estudié diseño gráfico y ahora estoy centrado en desarrollar mis habilidades como diseñador de videojuegos. Hace unos años fundé junto con mi buen amigo David Bernad (y otros antiguos miembros) un estudio de desarrollo de videojuegos independiente llamado No Wand Studios. Lanzamos varios juegos desarrollados en game jams y The Fall of Lazarus, nuestro primer gran proyecto. Más tarde y ya mano a mano con David, comenzamos el desarrollo de Hello, My Name is Nobody, un videojuego experimental centrado en las conversaciones y la soledad aun en gestación. Durante todo ese tiempo asumí las tareas de director creativo, artístico y narrativo, haciéndome cargo además del marketing y las relaciones públicas de la empresa. Además desde hace unos años formo parte de la redacción de GameReport, una editorial dedicada a la escritura y ensayo sobre videojuegos en formato tanto digital como físico, intentando analizar el medio desde un prisma atemporal y cultural así como su impacto en la sociedad. "
+            header_text_img = "/DISEÑO GRÁFICO/ Mis trabajos de diseño gráfico hast aahora. Una imagen vale más que mil palabras."
+            header_text_vid = "/EDICIÓN AUDIOVISUAL/ Algunos de los vídeos que he editado. Sobre todo trailers: adoro el reto de tener que resultar atractivo a la vez que explicas un producto en tan solo unos pocos minutos. "
+            header_text_txt = "/ESCRITURA/ Una selección de piezas escritas. Análisis, columnas de opinión, ¡incluso un postmortem!"
+            header_text_vdg = "/DISEÑO DE JUEGO Y DISEÑO NARRATIVO/ Desarrollos de videojuegos en los que he participado como diseñador narrativo, de juego y gráfico. La interacción es una herramienta poderosísima a la hora de sumergir al público en tu historia."
+            header_text_cnt = "/CONTACTO/  "
