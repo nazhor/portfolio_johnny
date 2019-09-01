@@ -644,4 +644,18 @@ function closeModal() {
 	document.getElementById("modal_visor").style.display = "none";
 };
 
+$(".thumb").hover(
+	function() {
+		change_img(this);
+	}, function() {
+		change_img(this);
+	}
+);
+
+function change_img(this_img) {
+	var tmp_src = $(this_img).attr("data-hover");
+	var current_src = $(this_img).attr("src");
+	$(this_img).attr("data-hover", current_src);
+	$(this_img).attr("src", tmp_src);
+};
 

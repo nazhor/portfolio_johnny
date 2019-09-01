@@ -74,6 +74,19 @@ a {
 	transition: width 0.5s;
 }
 
+#langSelector {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#langSelector li {
+	display: inline;
+}
+
+#currentLang {
+	text-decoration: underline;
+}
+
 @media only screen and (max-width: 768px) {
 	.menu_filter {
 		font-size: 12px;
@@ -82,9 +95,33 @@ a {
 
 .menu_filter:hover {
 	width: 100px;
-	background-color: red;
-	color: blue;
+	/* background-color: red; */
+	color: #ffffff;
 	cursor: pointer;
+}
+
+#menu_all:hover {
+	background-color: red;
+}
+
+#menu_img:hover {
+	background-color: #999;
+}
+
+#menu_vid:hover {
+	background-color: green;
+}
+
+#menu_txt:hover {
+	background-color: pink;
+}
+
+#menu_vdg:hover {
+	background-color: yellow;
+}
+
+#menu_cnt:hover {
+	background-color: orange;
 }
 
 .header_description {

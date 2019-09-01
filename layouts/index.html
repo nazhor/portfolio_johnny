@@ -13,7 +13,7 @@
 					{{ range $data.items.items }}
 					<li class="all {{ .tag }}">
 						<a href="{{ .button_url }}" data-title="{{ .title }}" data-description="{{ .description }}" data-button_text="{{ .button_text }}" data-tag="{{ .tag }}" data-video="{{ .video }}" data-slide1="{{ .slide1 }}" data-slide2="{{ .slide2 }}" data-slide3="{{ .slide3 }}" data-slide4="{{ .slide4 }}" data-slide5="{{ .slide5 }}" data-slide6="{{ .slide6 }}" data-slide7="{{ .slide7 }}" data-slide8="{{ .slide8 }}">
-							<img class="thumb" src="{{ .thumb }}"/>
+							<img class="thumb" src="{{ .thumb }}" data-hover="{{ .thumb_hover }}"/>
 						</a>
 					</li>
 					{{ end }}

@@ -17,14 +17,17 @@
 				<div class="menu_texts">
 					{{ if .IsTranslated }}
 						{{ range .Translations }}
-							<p><a href="{{ .Permalink }}">{{ .Site.Params.languageName }}</a></p>
+							<ul id="langSelector">
+								<li id="currentLang">{{ .Site.Params.languageNext }}</li>
+								<li><a href="{{ .Permalink }}">{{ .Site.Params.languageName }}</a></li>
+							</ul>
 						{{ end}}
 					{{ end }}
-					<p class="header_text header_text_all" style="display: inline-block;">{{ .Site.Params.header_text_all }}</p>
-					<p class="header_text header_text_img" style="display: none;">{{ .Site.Params.header_text_img }}</p>
-					<p class="header_text header_text_vid" style="display: none;">{{ .Site.Params.header_text_vid }}</p>
-					<p class="header_text header_text_txt" style="display: none;">{{ .Site.Params.header_text_txt }}</p>
-					<p class="header_text header_text_vdg" style="display: none;">{{ .Site.Params.header_text_vdg }}</p>
-					<p class="header_text header_text_cnt" style="display: none;">{{ .Site.Params.header_text_cnt }}</p>
+					<p class="header_text header_text_all" style="display: inline-block;"><strong>{{ .Site.Params.header_text_all_section }}</strong>{{ .Site.Params.header_text_all_content }}</p>
+					<p class="header_text header_text_img" style="display: none;"><strong>{{ .Site.Params.header_text_img_section }}</strong>{{ .Site.Params.header_text_img_content }}</p>
+					<p class="header_text header_text_vid" style="display: none;"><strong>{{ .Site.Params.header_text_vid_section }}</strong>{{ .Site.Params.header_text_vid_content }}</p>
+					<p class="header_text header_text_txt" style="display: none;"><strong>{{ .Site.Params.header_text_txt_section }}</strong>{{ .Site.Params.header_text_txt_content }}</p>
+					<p class="header_text header_text_vdg" style="display: none;"><strong>{{ .Site.Params.header_text_vdg_section }}</strong>{{ .Site.Params.header_text_vdg_content }}</p>
+					<p class="header_text header_text_cnt" style="display: none;"><strong>{{ .Site.Params.header_text_cnt_section }}</strong>{{ .Site.Params.header_text_cnt_content }}</p>
 				</div>
 			</header>
