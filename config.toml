@@ -35,8 +35,8 @@ googleAnalytics = "UA-XXXXXXXX-Y"
 [languages]
     [languages.en]
         [languages.en.params]
-            languageName = ">ENGLISH"
-            languageNext = "ESPAÑOL"
+            languageName = "> ENGLISH"
+            languageNext = "/ESPAÑOL"
             header_text_all_section = "/johnny.jpg/ABOUT ME/ "
             header_text_all_content = "Hi! I'm Jonathan Prat Guisado (.jpg), but everybody calls me Johnny. I'm a game, narrative and graphic designer. But mostly I'm a storyteller. I love telling stories and I do it through games, words and images. I studied graphic design and now I'm focused on developing my game design skills. Some years ago I co-founded with my good friend David Bernad (and some former members) an indie video game development studio called No Wand Studios. We released some little jam games and The Fall of Lazarus, our first big project. Later on and when we were only the two of us (David and I) we started working hand in hand on Hello, My Name is Nobody, an experimental video game about conversations and loneliness that it is yet to be finished. I'm also a staff editor at GameReport, a spanish video game focused editorial where we publish physical monographics and digital essays about video games analysing their uniqueness as a medium and their impact on society and culture."
             header_text_img_section = "/johnny.png/GRAPHIC DESIGN/ "
@@ -51,8 +51,8 @@ googleAnalytics = "UA-XXXXXXXX-Y"
             header_text_cnt_content = "If you want to talk about working together or whatever, drop me a line!"
     [languages.es]
         [languages.es.params]
-            languageName = ">ESPAÑOL"
-            languageNext = "ENGLISH"
+            languageName = "> ESPAÑOL"
+            languageNext = "/ENGLISH"
             header_text_all_section = "/johnny.jpg/SOBRE MI/ "
             header_text_all_content = "¡Hola! Soy Jonathan Prat Guisado (.jpg) pero todo el mundo me llama Johnny. Soy diseñador narrativo, de juego y gráfico. Pero sobre todo soy un cuenta cuentos. Me apasiona contar historias y lo hago a través de videojuegos, imágenes y palabras. Estudié diseño gráfico y ahora estoy centrado en desarrollar mis habilidades como diseñador de videojuegos. Hace unos años fundé junto con mi buen amigo David Bernad (y otros antiguos miembros) un estudio de desarrollo de videojuegos independiente llamado No Wand Studios. Lanzamos varios juegos desarrollados en game jams y The Fall of Lazarus, nuestro primer gran proyecto. Más tarde y ya mano a mano con David, comenzamos el desarrollo de Hello, My Name is Nobody, un videojuego experimental centrado en las conversaciones y la soledad aun en gestación. Durante todo ese tiempo asumí las tareas de director creativo, artístico y narrativo, haciéndome cargo además del marketing y las relaciones públicas de la empresa. Además desde hace unos años formo parte de la redacción de GameReport, una editorial dedicada a la escritura y ensayo sobre videojuegos en formato tanto digital como físico, intentando analizar el medio desde un prisma atemporal y cultural así como su impacto en la sociedad. "
             header_text_img_section = "/johnny.png/DISEÑO GRÁFICO/ "

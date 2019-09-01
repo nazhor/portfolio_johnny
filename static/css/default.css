@@ -65,8 +65,8 @@ a {
 }
 
 .menu_filter {
-	font-size: 20px;
-	font-family: 'Comic Sans MS';
+	font-size: 26px;
+	font-family: 'Arial';
 	list-style-type: none;
 	margin: 5px 20px 5px 20px;
 	width: 10px;
@@ -101,32 +101,32 @@ a {
 }
 
 #menu_all:hover {
-	background-color: red;
+	background-color: #000000;
 }
 
 #menu_img:hover {
-	background-color: #999;
+	background-color: #8400ff;
 }
 
 #menu_vid:hover {
-	background-color: green;
+	background-color: #fff600;
 }
 
 #menu_txt:hover {
-	background-color: pink;
+	background-color: #00ffde;
 }
 
 #menu_vdg:hover {
-	background-color: yellow;
+	background-color: #ff0078;
 }
 
 #menu_cnt:hover {
-	background-color: orange;
+	background-color: #000000;
 }
 
 .header_description {
 	padding: 10px 0px 0px 0px;
-	font-family: 'Comic Sans MS';
+	font-family: 'Arial';
 }
 
 .menu_texts p {
