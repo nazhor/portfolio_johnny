@@ -288,8 +288,9 @@ var Grid = (function() {
 			this.$slide8 = $('<img class="nzSlides" src="" onclick="openModal(); plusSlides(0);" style="display: none;">');
 			this.$buttons = $('<button class="nav_btn nav_btn_left" onclick="plusSlides(-1)">&#10094;</button><button class="nav_btn nav_btn_right" onclick="plusSlides(1)">&#10095;</button>');
 			this.$slides_container = $('<div class="left_container"><div>').append( this.$slide1, this.$slide2, this.$slide3, this.$slide4, this.$slide5, this.$slide6, this.$slide7, this.$slide8, this.$buttons);
-			this.$video_iframe = $('<iframe class="nzIframe" src="" frameborder="0"></iframe>');
-			this.$video_container = $('<div class="left_container"></div>').append(this.$video_iframe);
+			this.$video_iframe = $('<iframe src="" frameborder="0"></iframe>');
+			this.$video_iframe_container= $('<div class="nzIframe-container"></div>').append(this.$video_iframe);
+			this.$video_container = $('<div class="left_container"></div>').append(this.$video_iframe_container);
 			this.$modal_close = $('<span class="modal_close" onclick="closeModal()">&times;</span>');
 			this.$modal_buttons = $('<button class="nav_btn nav_btn_left" onclick="plusSlides(-1)">&#10094;</button><button class="nav_btn nav_btn_right" onclick="plusSlides(1)">&#10095;</button>');
 			this.$modal_slide1 = $('<img class="nzModalSlides" src="" style="width: 100%">');
@@ -366,7 +367,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide2) {
 				this.$slide2.attr('src', eldata.slide2);
-				this.$slide2.show();
+				this.$slide2.hide();
 				this.$buttons.show();
 				this.$modal_slide2.attr('src', eldata.slide2);
 				this.$modal_buttons.show();
@@ -379,7 +380,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide3) {
 				this.$slide3.attr('src', eldata.slide3);
-				this.$slide3.show();
+				this.$slide3.hide();
 				this.$modal_slide3.attr('src', eldata.slide3);
 			}else {
 				this.$slide3.attr('src', "");
@@ -388,7 +389,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide4) {
 				this.$slide4.attr('src', eldata.slide4);
-				this.$slide4.show();
+				this.$slide4.hide();
 				this.$modal_slide4.attr('src', eldata.slide4);
 			}else {
 				this.$slide4.attr('src', "");
@@ -397,7 +398,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide5) {
 				this.$slide5.attr('src', eldata.slide5);
-				this.$slide5.show();
+				this.$slide5.hide();
 				this.$modal_slide5.attr('src', eldata.slide5);
 			}else {
 				this.$slide5.attr('src', "");
@@ -406,7 +407,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide6) {
 				this.$slide6.attr('src', eldata.slide6);
-				this.$slide6.show();
+				this.$slide6.hide();
 				this.$modal_slide6.attr('src', eldata.slide6);
 			}else {
 				this.$slide6.attr('src', "");
@@ -415,7 +416,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide7) {
 				this.$slide7.attr('src', eldata.slide7);
-				this.$slide7.show();
+				this.$slide7.hide();
 				this.$modal_slide7.attr('src', eldata.slide7);
 			}else {
 				this.$slide7.attr('src', "");
@@ -424,7 +425,7 @@ var Grid = (function() {
 			}
 			if(eldata.slide8) {
 				this.$slide8.attr('src', eldata.slide8);
-				this.$slide8.show();
+				this.$slide8.hide();
 				this.$modal_slide8.attr('src', eldata.slide8);
 			}else {
 				this.$slide8.attr('src', "");
