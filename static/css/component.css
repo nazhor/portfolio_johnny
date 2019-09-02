@@ -105,12 +105,14 @@
 }
 
 .og-details {
-	padding: 0 40px 0 20px;
+	padding: 0 20px 0 20px;
 }
 
 @media only screen and (max-width: 768px) {
 	.og-details {
 		padding: 1px;
+		width: 95%;
+		max-height: 50%;
 	}
 }
 
