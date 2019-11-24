@@ -50,6 +50,7 @@
 .og-expander-inner {
 	padding: 50px 30px;
 	height: 100%;
+	/* display: flex; */
 }
 
 .og-close {

@@ -22,4 +22,4 @@ You only need the batch file named "Alfred.bat" but before you use it you have t
 With the files in the repository folder you only have to do the normal GIT procedure: Add -> Commit -> Push.
 You can use the GIThub client.
 
-## Done, you owe me a _couple_ of drinks
+## Done, you owe me a _couple_ of drink

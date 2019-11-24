@@ -239,15 +239,15 @@ a {
 
 .contact_photo img {
 	margin-top: 20px;
-	height: 400px;
-	width: 400px;
+	height: 432px;
+	width: 768px;
 }
 
 @media only screen and (max-width: 768px) {
 	.contact_photo img {
 		margin-top: 10px;
-		height: 75%;
-		width: 75%;
+		height: 100%;
+		width: 100%;
 	}
 }
 

@@ -65,13 +65,26 @@ a {
 }
 
 .menu_filter {
-	font-size: 20px;
-	font-family: 'Comic Sans MS';
+	font-size: 26px;
+	font-family: 'Arial';
 	list-style-type: none;
 	margin: 5px 20px 5px 20px;
 	width: 10px;
 	-webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
 	transition: width 0.5s;
+}
+
+#langSelector {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#langSelector li {
+	display: inline;
+}
+
+#currentLang {
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
@@ -82,14 +95,38 @@ a {
 
 .menu_filter:hover {
 	width: 100px;
-	background-color: red;
-	color: blue;
+	/* background-color: red; */
+	color: #ffffff;
 	cursor: pointer;
+}
+
+#menu_all:hover {
+	background-color: #000000;
+}
+
+#menu_img:hover {
+	background-color: #8400ff;
+}
+
+#menu_vid:hover {
+	background-color: #fff600;
+}
+
+#menu_txt:hover {
+	background-color: #00ffde;
+}
+
+#menu_vdg:hover {
+	background-color: #ff0078;
+}
+
+#menu_cnt:hover {
+	background-color: #000000;
 }
 
 .header_description {
 	padding: 10px 0px 0px 0px;
-	font-family: 'Comic Sans MS';
+	font-family: 'Arial';
 }
 
 .menu_texts p {
@@ -166,7 +203,7 @@ a {
 
 .nzSlides {
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	text-align: center;
 }
 
@@ -174,9 +211,19 @@ a {
 	cursor: zoom-in;
 }
 
-.nzIframe {
-	width: 100%;
+.nzIframe-container {
+	overflow: hidden;
+  	padding-top: 56.25%;
+  	position: relative;
+}
+
+.nzIframe-container iframe {
+	border: 0;
 	height: 100%;
+	width: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
 }
 
 .contact_container {
