@@ -645,6 +645,12 @@ function closeModal() {
 	document.getElementById("modal_visor").style.display = "none";
 };
 
+$(document).keyup(function(e){
+    if(e.keyCode === 27) {
+		closeModal();
+	}
+});
+
 $(".thumb").hover(
 	function() {
 		change_img(this);
