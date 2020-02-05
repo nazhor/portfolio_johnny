@@ -348,6 +348,7 @@ var Grid = (function() {
 			this.$description.html( eldata.description );
 
 			if(eldata.buttontext) {
+				this.$href.attr('href', eldata.href);
 				this.$href.text(eldata.buttontext);
 				this.$href.show();
 			}else {

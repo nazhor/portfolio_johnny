@@ -48,7 +48,7 @@
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
+	padding: 50px 30px 15px;
 	height: 100%;
 	/* display: flex; */
 }
@@ -112,7 +112,7 @@
 	.og-details {
 		padding: 1px;
 		width: 95%;
-		max-height: 50%;
+		/*max-height: 50%;*/
 	}
 }
 
@@ -129,13 +129,13 @@
 .og-details h3 {
 	font-weight: 300;
 	font-size: 52px;
-	padding: 40px 0 10px;
+	padding: 20px 0px;
 	margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {
 	.og-details h3 {
-		padding: 10px 0 5px;
+		padding: 10px 0px 5px;
 		margin-bottom: 0px;
 	}
 }
