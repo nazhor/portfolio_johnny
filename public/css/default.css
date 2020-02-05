@@ -137,16 +137,23 @@ a {
 .left_container {
 	float: left;
 	width: 50%;
-	height: 100%;
+	/* height: 100%; */
 	overflow: hidden;
 	position: relative;
 	text-align: center;
 }
 
+/* @media only screen and (max-width: 360px) {
+	.left_container {
+		width: 95%;
+		max-height: 50%;
+	}
+} */
+
 @media only screen and (max-width: 768px) {
 	.left_container {
 		width: 95%;
-		height: 50%;
+		max-height: 50%;
 	}
 }
 
@@ -232,15 +239,15 @@ a {
 
 .contact_photo img {
 	margin-top: 20px;
-	height: 400px;
-	width: 400px;
+	height: 432px;
+	width: 768px;
 }
 
 @media only screen and (max-width: 768px) {
 	.contact_photo img {
 		margin-top: 10px;
-		height: 75%;
-		width: 75%;
+		height: 100%;
+		width: 100%;
 	}
 }
 
